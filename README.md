@@ -9,4 +9,5 @@ nmap 192.168.?.*
 
 to start remote desktop: 
 > ssh -X pi@ip
+
 > /etc/X11/xsession
