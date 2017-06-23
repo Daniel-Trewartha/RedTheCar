@@ -2,7 +2,7 @@
 
 Red is based on the [Duckietown](http://duckietown.mit.edu/) platform.
 
-He is driven by a [**Raspberry Pi 3 Model B**](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/). This is a credit card sized computer with a [Camera Serial Interface](https://en.wikipedia.org/wiki/Camera_Serial_Interface) and GPIO pins, which allow it to process video and send instructions to the motors. Video is obtained from a **fish-eye camera** built for Raspberry Pi, while the motors require a **motor hat** to handle the larger currents needed to drive the motors. A **MicroSD card** serves as memory for the Pi. Separate power supplies are needed for the Pi and for the motors.
+He is driven by a [**Raspberry Pi 3 Model B**](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/). This is a credit card sized computer with a [Camera Serial Interface](https://en.wikipedia.org/wiki/Camera_Serial_Interface) and GPIO pins, which allow it to process video and send instructions to the motors. Video is obtained from a **fish-eye camera** built for Raspberry Pi, while the motors require a **motor hat** to handle the larger currents needed to drive the motors. A **MicroSD card** serves as memory for the Pi. A standard, off-the-shelf **chassis** provides the motors and wheels. Separate **power supplies** are needed for the Pi and for the motors.
 
 
 ## In a list
@@ -11,11 +11,10 @@ He is driven by a [**Raspberry Pi 3 Model B**](https://www.raspberrypi.org/produ
 * Adafruit DC & Stepper Motor Hat for Raspberry Pi ([$22.50](https://www.adafruit.com/product/2348), requires soldering iron for assembly)
 * SainSmart Wide Angle Fish-Eye Camera Lenses for Raspberry Pi Arduino ([$25.99](https://www.amazon.com/SainSmart-Fish-Eye-Camera-Raspberry-Arduino/dp/B00N1YJKFS))
 * MicroSD card (eg 32GB [$12.99](https://www.amazon.com/Samsung-MicroSD-Adapter-MB-ME32GA-AM/dp/B06XWN9Q99/))
-
 * Chassis ([$10.90](https://www.amazon.com/Laqiya-Chassis-Encoder-Battery-Arduino/dp/B01MTA1Q8U/), or equivalent)
-* 4 x AA batteries (for powering the motors) 
 * USB rechargable battery pack (for powering the Pi, eg [anything like this](https://www.amazon.com/gp/product/B00DTXA578/))
 * USB to micro USB cable (to connect USB battery to Pi)
+* 4 x AA batteries (for powering the motors) 
 * 2 x standoffs (not strictly necessary, but keeps the Hat sitting nicely on the Pi)
 * Wire (2 colours preferable)
 * Camera stand (currently fashioned out of cardboard)
