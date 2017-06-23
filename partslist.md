@@ -9,7 +9,7 @@ He is driven by a [**Raspberry Pi 3 Model B**](https://www.raspberrypi.org/produ
 
 * Raspberry Pi 3 Model B ([$35.50](https://www.amazon.com/Raspberry-Model-A1-2GHz-64-bit-quad-core/dp/B01CD5VC92))
 * Adafruit DC & Stepper Motor Hat for Raspberry Pi ([$22.50](https://www.adafruit.com/product/2348), requires soldering iron for assembly)
-* SainSmart Wide Angle Fish-Eye Camera Lenses for Raspberry Pi Arduino ([$25.99](https://www.amazon.com/SainSmart-Fish-* Eye-Camera-Raspberry-Arduino/dp/B00N1YJKFS))
+* SainSmart Wide Angle Fish-Eye Camera Lenses for Raspberry Pi Arduino ([$25.99](https://www.amazon.com/SainSmart-Fish-Eye-Camera-Raspberry-Arduino/dp/B00N1YJKFS))
 * MicroSD card (eg 32GB [$12.99](https://www.amazon.com/Samsung-MicroSD-Adapter-MB-ME32GA-AM/dp/B06XWN9Q99/))
 
 * Chassis ([$10.90](https://www.amazon.com/Laqiya-Chassis-Encoder-Battery-Arduino/dp/B01MTA1Q8U/), or equivalent)
