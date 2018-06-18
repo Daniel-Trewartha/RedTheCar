@@ -24,10 +24,9 @@ RL = DeepQNetwork(n_actions=n_act, n_features=height*width*n_c, learning_rate=0.
 
 total_steps = 0
 
-
+env = driving_env.driving_env(height,width)
 for i_episode in range(1000):
-
-    env = driving_env.driving_env(height,width)
+    
     observation = env.reset()
     ep_r = 0
 

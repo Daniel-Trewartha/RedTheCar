@@ -27,16 +27,16 @@ class driving_env:
         self.resolution = (height,width)
         self.camera = picamera.PiCamera()
         self.camera.resolution = self.resolution
-        self.camera_output = np.zeros((height,width,3))
+        self.camera_output_raw = np.empty((height,width,3), dtype=np.uint8)
+        self.camera_output = np.zeros((height*width*3))
         
         #Last 5 images, to determine if we hit a wall
         self.queue = deque([])
         self.queue_size = 5
         
         for i in range(self.queue_size): 
-            with picamera.array.PiRGBArray(self.camera,size=(height,width)) as output:
-                self.camera.capture(output, 'rgb')
-                self.queue.append(output.array.flatten())
+            self.camera.capture(self.camera_output_raw, 'rgb')
+            self.queue.append(self.camera_output_raw.flatten())
 
         #threshold before we decide we're hitting a wall
         #I have no idea what a sensible value for this is....
@@ -72,14 +72,15 @@ class driving_env:
 
         #left, right, forward
         if (action == 0):
-            self.leftMotor.run(Adafruit_MotorHAT.FORWARD)
-            self.rightMotor.run(Adafruit_MotorHAT.FORWARD)
+            print("Left")
             self.leftMotor.setSpeed(125)
             self.rightMotor.setSpeed(75)
         elif(action == 1):
+            print("RIGHT")
             self.leftMotor.setSpeed(75)
             self.rightMotor.setSpeed(125)
         elif(action == 2):
+            print("FORWARD")
             self.leftMotor.setSpeed(125)
             self.rightMotor.setSpeed(125)
         else:
@@ -106,17 +107,16 @@ class driving_env:
                 pictureDifference += np.sum(np.abs(im - lastIm))
             lastIm = im
 
-        print(pictureDifference)
         if pictureDifference > self.threshold:
             return False
         else:
+            print("HIT WALL")
             return True
 
     def _capture(self):
         #capture image, store it in camera_output
-        with picamera.array.PiRGBArray(self.camera,size=self.resolution) as output:
-            self.camera.capture(output, 'rgb')
-            self.camera_output = output.array.flatten()
+        self.camera.capture(self.camera_output_raw, 'rgb')
+        self.camera_output = self.camera_output_raw.flatten()
         self.queue.popleft()
         self.queue.append(self.camera_output)
         return ""
@@ -127,7 +127,7 @@ class driving_env:
         self.rightMotor.run(Adafruit_MotorHAT.BACKWARD)
         self.leftMotor.setSpeed(125)
         self.rightMotor.setSpeed(125)
-        time.sleep(0.5)
+        time.sleep(1.0)
         self._turnOffMotors()
         return ""
         
